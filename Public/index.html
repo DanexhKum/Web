@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Chef 🎤🍲</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><span class="icon">🍳</span> Mood Chef</h1>
+      <p class="subtitle">Speak your mood, discover delicious recipes!</p>
+    </header>
+
+    <main>
+      <button id="record-btn" class="btn pulse">
+        <i class="fas fa-microphone"></i> Record Voice
+      </button>
+
+      <div id="mood-display" class="mood-display hidden">
+        <div class="sound-wave">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <div id="results">
+        <div id="mood-result" class="hidden"></div>
+        <div id="recipes-container"></div>
+      </div>
+
+      <div id="manual-mood" class="manual-mood"></div>
+    </main>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Analyzing your mood...</p>
+    </div>
+  </div>
+
+  <!-- Recipe Modal -->
+  <div id="recipe-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-recipe-image" class="modal-recipe-image"></div>
+      <div class="modal-recipe-details">
+        <h2 id="modal-recipe-title"></h2>
+        <div class="modal-recipe-meta">
+          <span><i class="fas fa-clock"></i> <span id="modal-recipe-time"></span> mins</span>
+          <span><i class="fas fa-utensils"></i> <span id="modal-recipe-servings"></span> servings</span>
+        </div>
+        <h3>Instructions</h3>
+        <p id="modal-recipe-instructions"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
