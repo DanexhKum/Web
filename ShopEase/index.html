@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your One-Stop Shopping Destination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Shop<span>Ease</span></h1>
+            <p class="tagline">Shop Smart, Live Easy</p>
+        </div>
+        <div class="cart-icon">
+            <span id="cart-count">0</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/2838/2838895.png" alt="Cart" width="30">
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="products-header">
+                <h2>Discover Amazing Products</h2>
+                <select id="category-filter" class="category-select">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+
+        <section class="cart-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="total-amount">0.00</span></h3>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
